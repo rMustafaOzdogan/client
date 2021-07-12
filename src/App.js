@@ -27,7 +27,7 @@ function App() {
 
 
   useEffect(() => {
-    Axios.get('http://www.kulmira.xyz:3000/getTemplate').then(response => {
+    Axios.get('https://mezuniyet.herokuapp.com/getTemplate').then(response => {
       setTemplateList(response.data);
     })
   },[])
@@ -86,7 +86,7 @@ function App() {
           phoneNumber: Yup.string().required("Lütfen Boş Bırakmayın")
         })}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        Axios.post("http://www.kulmira.xyz:3000/insert", {nameSurname: values.nameSurname.toLocaleUpperCase('tr-TR'), faculty: values.faculty, department: values.department.toLocaleUpperCase('tr-TR'), city: city, templateType: type, email: values.email, phoneNumber: values.phoneNumber })
+        Axios.post("https://mezuniyet.herokuapp.com/insert", {nameSurname: values.nameSurname.toLocaleUpperCase('tr-TR'), faculty: values.faculty, department: values.department.toLocaleUpperCase('tr-TR'), city: city, templateType: type, email: values.email, phoneNumber: values.phoneNumber })
         .then(
           function ( res ) {
             setResult(res.data);
