@@ -1,38 +1,56 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+/*body,
+html {
+  height: 100%;
+  margin: 0;
+  background-image: url("./selcukLogo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}*/
+
+input,
+button {
+  width: 200px;
+  height: 30px;
+  font-size: 20px;
+  margin: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.TextField {
+  width: 300px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.images-container img {
+  width: 250px;
+  object-fit: contain;
+}
+
+.images-container img:focus {
+  border: 1px solid red;
+}
+
+.MuiFormControl-root {
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .images-container {
+    justify-content: end;
+    overflow-x: auto;
   }
 }
